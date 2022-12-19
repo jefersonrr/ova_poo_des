@@ -26,10 +26,44 @@ def admin_estudiantes(request):
     if request.session.get('user','DE') == 'DE':
             return render(request,'login/login.html')
     user= request.session.get('user','DE')
+    
     context = {
-        'user':user,
+    'user':user,
+    'estudiantes':consultar_estudiantes(),
     }
     return render(request,'admin/index.html',context=context)
+
+
+def consultar_estudiantes():
+    usuarios = User.objects.filter(rol=1)
+    estudiantes=[]
+
+    for us in usuarios:
+        intentos = IntentoTest.objects.filter(user=us)
+        nota =0
+        test1 = "-"
+        test2 = "-"
+        test3 = "-"
+        test4 = "-"
+        for inte in intentos:
+            nota += inte.score_total
+        if len(intentos)>0:
+            nota= round(nota /len(intentos),1)
+        for  i in intentos:
+            if i.test.id == 1:
+                test1 = round(i.score_total,1)
+            if i.test.id == 2:
+                test2 = round(i.score_total,1)
+            if i.test.id == 3:
+                test3 = round(i.score_total,1)
+            if i.test.id == 4:
+                test4 = round(i.score_total,1)
+
+        data = {"nombre":us.person.name + " " + us.person.last_name, "nit": us.person.cedula, "codigo":us.person.codigo,
+        "celular":us.person.phone, "email":us.person.email, "nota":nota, "test1":test1,"test2":test2,"test3":test3,"test4":test4 }
+        estudiantes.append(data)
+        
+    return estudiantes
 
 def admin_show_estudiantes(request):
     if request.session.get('user','DE') == 'DE':
@@ -722,9 +756,12 @@ def resultado_test_4(request):
             if(len(rta)>0):
                 promedio+=question.score_question
         intento = IntentoTest()
+        print(df)
+        print(rta)
+        print(intento)
+        print(promedio)
         
-        
-        te = Tests.objects.filter(id=1)
+        te = Tests.objects.filter(id=4)
         print(te)
         intento.user=user_id[0]
         intento.test=te[0]

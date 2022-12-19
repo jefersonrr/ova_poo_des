@@ -1,7 +1,7 @@
 from django.db import models
 
 class Person(models.Model):
-    cedula = models.IntegerField(primary_key=True)
+    cedula =  models.CharField(max_length=30,primary_key=True)
     name = models.CharField(max_length=200, null=False, blank=False)
     last_name = models.CharField(max_length=200, null=False, blank=False)
     type_document = models.CharField(max_length=20,blank=False,null=False)

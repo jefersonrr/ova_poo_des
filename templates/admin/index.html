@@ -45,23 +45,40 @@
                                     <th>Código</th>
                                     <th>Celular</th>
                                     <th>Correo institucional</th>
-                                    <th>Nota Promedio Final</th>
-                                    <th>Ver datos completos</th>
+                                    <th>Test 1</th>
+                                    <th>Test 2</th>
+                                    <th>Test 3</th>
+                                    <th>Test 4</th>
+                                    <th>Promedio Final</th>
+                                    
                                  <!--    <th>Acciones</th> -->
                                 </tr>
                             </thead>
                             <tbody>
                               <!--   @forelse ($items as $item) -->
-                                    <tr>
-                                        <td>Juan</td>
-                                        <td>1009287477</td>
-                                        <td>1151759</td>
-                                        <td>3145456578</td>
-                                        <td>juan@ufps.edu.co</td>
+                              {% for est in estudiantes %}      
+                              <tr>
+                                        <td>{{ est.nombre }}</td>
+                                        <td>{{ est.nit }}</td>
+                                        <td>{{ est.codigo }}</td>
+                                        <td>{{ est.celular }}</td>
+                                        <td>{{ est.email }}</td>
                                         <td>
-                                            4.5
+                                            {{ est.test1 }}
                                         </td>
-                                        <td style="text-align: center">
+                                        <td>
+                                            {{ est.test2 }}
+                                        </td>
+                                        <td>
+                                            {{ est.test3 }}
+                                        </td>
+                                        <td>
+                                            {{ est.test4 }}
+                                        </td>
+                                        <td>
+                                            {{ est.nota }}
+                                        </td>
+                                        <!-- <td style="text-align: center">
                                             <a href="../admin_estudiantes_show/">
                                                 <button style=" border: none ;background-color: transparent"
                                                     type="submit">
@@ -70,7 +87,7 @@
                                                 </button>
 
                                             </a>
-                                        </td>
+                                        </td> -->
                                      <!--    <td>
                                             <div class="icons-acciones">
                                                 <div class="mr-3">
@@ -102,7 +119,7 @@
                                             </div>
                                         </td> -->
                                     </tr>
-
+                                    {% endfor %}   
                                     
                           <!--       @empty
                                     <tr>
