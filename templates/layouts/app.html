@@ -1,0 +1,493 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> {% block title %}  {% endblock %}</title>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'css/adminlte.min.css' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   
+<link rel="stylesheet" href="{% static 'css/test.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/card.css' %}">
+    
+
+   <!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+
+
+    <style>
+            /*** Service ***/
+    .service-item {
+        background: var(--light);
+        transition: .5s;
+    }
+
+    .service-item:hover {
+        margin-top: -10px;
+        background: var(--danger);
+    }
+
+    .service-item * {
+        transition: .5s;
+    }
+
+    .service-item:hover * {
+        color: var(--light) !important;
+    }
+   
+    </style>
+
+{% block content2  %}
+
+{% endblock  %}
+
+</head>
+
+<a name="arriba" ></a>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+       <!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-dark navbar-danger">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item color">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+
+
+
+        <li class="nav-item">
+            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+        </li>
+
+        <li class="nav-item">
+
+            <a class="nav-link" data-slide="true" role="button"
+                href="../cerrar_session/">
+                <i class="fa fa-power-off"></i>
+
+                <form action="#" method="post" id="logout">
+                   
+                </form>
+
+            </a>
+
+        </li>
+    </ul>
+</nav>
+<!-- ./Navbar -->
+
+        <!-- /.Navbar -->
+
+        <!-- Main Sidebar Container -->
+        <!-- Main Sidebar -->
+<aside class="main-sidebar sidebar-light-danger elevation-4 sidebar-no-expand " id="sidebar" >
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link navbar-danger text-light">
+        <span class="logoMini ">
+            OVA
+        </span>
+        <span class="brand-text font-weight-light ">POO-1</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar ">
+        <!-- Sidebar user (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+               
+                <img src="{% static 'img/AdminLTELogo.png' %}" class="img-circle img-fluid"
+                    alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">{{ user }}</a>
+            </div>
+        </div>
+
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+            <div class="input-group" data-widget="sidebar-search" data-highlight-class='text-dark'
+                data-not-found-text='No encontrado'>
+                <input class="form-control form-control-sidebar" type="search" placeholder="Buscar"
+                    aria-label="Search" highlightClass="text-dark">
+                <div class="input-group-append">
+                    <button class="btn btn-sidebar">
+                        <i class="fas fa-search fa-fw"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+
+                     <li class="nav-item">
+                        <a href="../home/" class="nav-link">
+                            <em class="nav-icon fas fa-lightbulb"></em>
+                            <p>
+                                Acerca del OVA
+                            </p>
+                        </a>
+
+                    </li>
+
+                     <li class="nav-item">
+                        <a href="#" class="nav-link"  >
+                            <em class="nav-icon fas fa-cubes"></em>
+                            <p>
+                                TEMA 1: CONCEPTOS BÁSICOS DE LA POO
+                                <em class="right fas fa-angle-left"></em>
+    
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="../subtema1.1/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 1.1 Resolución de un Problema en Orientación a Objetos </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema1.2/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 1.2 Pilares de la POO.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema1.3/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 1.3 Conceptos básicos de Objetos.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema1.4/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 1.4 Concepto de Clase.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema1.5/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 1.5 Estructura general de una aplicación en Orientación a Objetos.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../test1/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>TEST 1</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item" style="{{ test2 }}">
+                        <a href="#" class="nav-link">
+                            <em class="nav-icon fas fa-search"></em>
+                            <p>
+                                TEMA 2: FASE DE ANÁLISIS-DISEÑO
+                                <em class="right fas fa-angle-left"></em>
+    
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="../subtema2.1/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 2.1 Análisis del Problema.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema2.2/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 2.2 Diseño del Problema.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema2.3/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 2.3 Generar Código base.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema2.4/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 2.4 Aplicación casos de Estudio.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../test2/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>TEST 2</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" style="{{ test3 }}">
+                        <a href="#" class="nav-link">
+                            <em class="nav-icon fas fa-cube"></em>
+                            <p>
+                                TEMA 3: INTRODUCCIÓN A LAS CLASES Y OBJETOS
+                                <em class="right fas fa-angle-left"></em>
+    
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="../subtema3.1/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 3.1 Modificadores de visibilidad de los atributos y métodos.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema3.2/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 3.2 Atributos: Declaración de acuerdo al lenguaje de POO.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema3.3/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 3.3 Métodos: Tipos de métodos y Declaración en un lenguaje de POO.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema3.4/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 3.4 Instrucción de retorno.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema3.5/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 3.5 Instrucción de asignación.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema3.6/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 3.6 Métodos con/sin parámetros: Constructores, get, set, mutadores.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema3.7/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 3.7 Declaración, instanciación e inicialización de objetos.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema3.8/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 3.8 La referencia This.</p>
+                                </a>
+                            </li> <li class="nav-item">
+                                <a href="../subtema3.9/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 3.9 Instrucción llamada de método.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema3.10/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 3.10 Sobrecarga de métodos y constructores en una misma clase.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../test3/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>TEST 3</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item" style="{{ test4 }}">
+                        <a href="#" class="nav-link">
+                            <em class="nav-icon fas fa-object-group"></em>
+                            <p>
+                                TEMA 4: DISEÑO DE INTERFACES GRÁFICAS
+                                <em class="right fas fa-angle-left"></em>
+    
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="../subtema4.1/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 4.1 Contenedores: JFrame, JPanel.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema4.2/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 4.2 Para captura de Datos: JTextField.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema4.3/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 4.3 Para Visualización de Datos: JLabel, JTextArea.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema4.4/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 4.4 Para despliegue de Información: JCombobox, JList.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema4.5/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 4.5 Para Acción de Comando: JButton.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema4.6/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 4.6 Para selección de opciones: JRadioButtom, JCheckBox.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema4.7/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 4.7 Manejo de Menús: JMenu, JMenuBar, JMenuItem.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../subtema4.8/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>SUBTEMA 4.8 Manejo de Formularios Múltiples.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ejercicioPracticoFinal/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>Ejercicio Práctico Final.</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../test4/" class="nav-link">
+                                    <em class="far fa-circle nav-icon"></em>
+                                    <p>TEST 4</p>
+                                </a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+
+
+            
+
+
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+<!-- ./Main Sidebar -->
+
+        <!-- ./Main Sidebar -->
+               <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+         <br>
+            {% block content %}
+              
+            {% endblock  %}     
+            <br> 
+        </div>
+        <!-- /.content-wrapper -->
+        
+
+
+     
+
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+                <b>Versión</b> 1.0
+            </div>
+            <strong>OVA - Programación Orientada a Objetos -POO-1 &copy; 2022. </strong>
+        </footer>
+        
+        <!-- -/Footer -->
+
+  
+    </div>
+    <!-- ./wrapper -->
+
+
+    
+    <!-- jQuery -->
+    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+     {% endcomment %}
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+ </script>
+
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- AdminLTE App -->
+ <!--    <script src="adminlte/dist/js/adminlte.min.js"></script> -->
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous">
+    </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+            
+            
+            {% block content3  %}
+
+            {% endblock  %}
+
+</body>
+
+</html>
+
+

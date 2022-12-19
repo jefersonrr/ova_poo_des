@@ -1,0 +1,86 @@
+{%extends "layouts/app.html" %}
+
+{% block title %} Subtema 2.4 {% endblock %}
+
+{% block content2  %}
+    <style>
+        .content p{
+            font-size: 20px;
+        }
+        .botonGC {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+         }
+    </style>
+{% endblock %}
+
+{% block content  %}
+
+
+  <!-- Main content -->
+  <section class="content mt-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>SUBTEMA 2.4 Aplicación casos de Estudio</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+                        <h5>A Continuación se listan tres aplicaciones de casos de estudio:</h5>
+                            <ol class="mt-4">
+                                <li class="mt-2"><p><b>Sistema de gestión de inventario de una empresa:</b> En este caso, podríamos utilizar la programación orientada a objetos para crear clases que representen diferentes tipos de productos, así como las operaciones que se pueden realizar con ellos, como agregar o eliminar productos del inventario. Además, podríamos crear clases que representen diferentes ubicaciones del inventario, y que permitan realizar operaciones como trasladar productos de una ubicación a otra</p></p></li>
+                                <li class="mt-2"><p><b>Sistema de reservas de un hotel:</b> En este caso, podríamos utilizar la programación orientada a objetos para crear clases que representen diferentes tipos de habitaciones, así como las operaciones que se pueden realizar con ellas, como reservar o liberar habitaciones. Además, podríamos crear clases que representen diferentes servicios del hotel, como el servicio de habitaciones o el servicio de restaurante, y que permitan realizar operaciones como hacer reservas o verificar la disponibilidad de servicios.</p></li>
+                                <li class="mt-2"><p><b>Aplicación de mensajería instantánea:</b> En este caso, podríamos utilizar la programación orientada a objetos para crear clases que representen diferentes usuarios, así como las operaciones que se pueden realizar con ellos, como enviar o recibir mensajes. Además, podríamos crear clases que representen diferentes grupos de usuarios, y que permitan realizar operaciones como agregar o eliminar usuarios de un grupo.</p></li>
+                            </ol>
+                    </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+<div class="container text-center">
+    <h1><b>Actividad</b> </h1>
+
+</div>
+
+
+<div class="container ">
+    <div class="row g-5 d-flex justify-content-center ">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card " style="width: 21rem; height: 350px;" id="card">
+                    <img src="../../static/img/undraw_Programming_re_kg9v.png" class="cd card-img-top" height="200px"
+                        alt="...">
+                    <div class="card-body d-flex justify-content-center text-center">
+                            <h5 class="card-title"  id="card-title"> <a href="../subtema2.4_actv1/" class="vinculoTitulo">Crucigrama</a></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../subtema2.4_actv1/" class="botonGC btn btn-danger">Realizar</a>
+                    </div>
+                </div>
+            </div>
+
+
+  
+    </div>
+
+
+</div>
+
+<div class="text-center mt-2 ">
+    <a href="../subtema2.3/" class="btn btn-lg btn-warning mr-5" >Regresar</a>
+    <a href="../test2/" class="btn btn-lg  btn-danger mr-5" >Siguiente</a>
+    <a href="#arriba" class="btn-circle p-3 rounded-circle  btn-info " ><i class='fa fa-arrow-up'></i></a>
+ </div>
+
+{% endblock %}

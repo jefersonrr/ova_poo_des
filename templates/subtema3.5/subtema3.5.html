@@ -1,0 +1,155 @@
+{%extends "layouts/app.html" %}
+
+{% block title %} Subtema 3.5 {% endblock %}
+
+{% block content2  %}
+    <style>
+        .content p{
+            font-size: 20px;
+        }
+        pre{
+            font-size: 20px;
+        }
+        .botonGC {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+         }
+    </style>
+{% endblock %}
+
+{% block content  %}
+
+
+
+  <!-- Main content -->
+  <section class="content ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>SUBTEMA 3.5 Instrucción de asignación</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                        <p>El operador de asignación en Java (como en otros lenguajes) permite asignar valores a las variables. 
+                            Si una variable tiene un valor previo y se realiza una asignación, el valor que tenía se reemplazará con el nuevo.</p>
+
+
+                        <div class="d-flex justify-content-center">
+
+                            <div class="card border-danger border-2"  style="max-width: 40rem;">
+                                <div class="card-body">
+                                    <pre  style="white-space: pre-line;"><code class="language-java">int x; 
+                                        /* Se asigna valor 5 a la variable a y valor 6 a la variable b*/
+                                        int a = 5;
+                                        int b = 6;
+                                        /* Al asignar a la variable a el valor de la variable b, la variable a perderá su valor anterior (5) que se reemplazará por el valor de la variable b (6)*/
+                                        a = b;         
+                                </code></pre> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Los valores que se asignan a una variable serán literales o valores devueltos por operaciones. Hay que tener en cuenta que deben ser del mismo tipo, o de uno compatible, 
+                            que el de la variable a la que se le van a asignar. En caso contrario se producirán errores de compilación.</p>
+
+                  
+                           
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
+ <!-- Main content -->
+ <section class="content ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>Operaciones de asignación compuestos en JAVA</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                        <p>Existe una variación del operador de asignación en Java que implica la combinación de este con otros operadores. Esto permite realizar asignaciones de operaciones de una forma más compacta.
+                            <br><br>
+                            En la siguiente tabla se muestran algunos operadores de asignación compuestos que permite Java y su forma extendida equivalente.
+                            </p>
+
+
+                            <div class="card-body text-center">
+                                <img src="../../static/img/operadores.png" class="imgInformacion img-fluid " alt="operadores" />    
+                            </div> 
+
+                        <p>Para más información de tipos de operadores en JAVA: <a href="https://www.arkaitzgarro.com/java/capitulo-4.html" target="_blank">Java - Operadores</a></p>
+
+                  
+                           
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
+<div class="container text-center">
+    <h1><b>Actividad</b> </h1>
+
+</div>
+
+
+<div class="container ">
+    <div class="row g-5 d-flex justify-content-center ">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card " style="width: 21rem; height: 350px;" id="card">
+                    <img src="../../static/img/undraw_Online_test_re_kyfx.png" class="cd card-img-top" height="200px"
+                        alt="...">
+                    <div class="card-body d-flex justify-content-center text-center">
+                            <h5 class="card-title"  id="card-title"> <a href="../subtema3.5_actv1/" class="vinculoTitulo">Verdadero o falso</a></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../subtema3.5_actv1/" class="botonGC btn btn-danger">Realizar</a>
+                    </div>
+                </div>
+            </div>
+
+
+  
+    </div>
+
+
+</div>
+
+<div class="text-center mt-2 ">
+    <a href="../subtema3.4/" class="btn btn-lg btn-warning mr-5" >Regresar</a>
+    <a href="../subtema3.6/" class="btn btn-lg  btn-danger mr-5" >Siguiente</a>
+    <a href="#arriba" class="btn-circle p-3 rounded-circle  btn-info " ><i class='fa fa-arrow-up'></i></a>
+ </div>
+
+{% endblock %}
+
+
+{% block content3  %}
+<script>hljs.highlightAll();</script>
+{% endblock %}

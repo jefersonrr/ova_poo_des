@@ -1,0 +1,122 @@
+{%extends "layouts/appAdmin.html" %}
+
+{% block title %} Datos Generales {% endblock %}
+
+
+{% block content  %}
+
+
+    <!-- Main content -->
+    <section class="content ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header border-info">
+                            <h3 class="card-title"><b>Datos personales</b> </h3>
+                        </div>
+
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Cédula</th>
+                                            <th>Nombre</th>
+                                            <th>Apellido</th>
+                                            <th>Código</th>
+                                            <th>Celular</th>
+                                            <th>Correo institucional</th>
+                                            <th>Correo personal</th>
+                                            <th>Telefono fijo</th>
+                                            <th>Fecha nacimiento</th>
+                                            <th>Lugar nacimiento</th>
+                                            <th >Dirección residencia</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>100995444</td>
+                                            <td>Juan</td>
+                                            <td>Lopez</td>
+                                            <td>1151759</td>
+                                            <td>3154545654</td>
+                                            <td>juan@ufps.edu.co</td>
+                                            <td>juan@gmail.com</td>
+                                            <td>5703888</td>
+                                            <td>14/10/1999</td>
+                                            <td>Cúcuta</td>
+                                            <td>Calle 9 #0-50 Caobos</td>
+
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+
+                    <!-- Academic Information -->
+                    <div class="card">
+                        <div class="card-header  border-info">
+                            <h3 class="card-title"><b>Notas</b> </h3>
+                            
+                        </div>
+
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="display table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+ 
+                                            <th>Test 1</th>
+                                            <th>Test 2</th>
+                                            <th>Test 3</th>
+                                            <th>Test 4</th>
+                                            <th>Nota Promedio Final</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       <!--  @forelse ($academics as $academic) -->
+                                            <tr>
+                                                <td>4.0</td>
+                                                <td>4.5</td>
+                                                <td>4.8</td>
+                                                <td>3.5</td>
+                                                <td>4.5</td>
+                             
+                                            </tr>
+                                    <!--     @empty
+                                            <tr>
+                                                <td colspan="12">Vacío.</td>
+                                            </tr>
+                                        @endforelse -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                           
+                        </div>
+                        <!-- /.card-body -->
+
+
+                    </div>
+                    <!-- ./Academic Information -->
+
+                 
+
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+
+
+{% endblock %}

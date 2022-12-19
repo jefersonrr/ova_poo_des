@@ -1,0 +1,356 @@
+{%extends "layouts/app.html" %}
+
+{% block title %} Subtema 4.1 {% endblock %}
+
+{% block content2  %}
+    <style>
+        .content p{
+            font-size: 20px;
+        }
+        pre{
+            font-size: 20px;
+        }
+        .botonGC {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+         }
+    </style>
+{% endblock %}
+
+{% block content  %}
+
+ <!-- Main content -->
+ <section class="content ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+      
+                        <h3><b>SUBTEMA 4.1 Contenedores: JFrame, JPanel</b> </h3>
+       
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+  <!-- Main content -->
+  <section class="content mt-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>Introducción al tema de Interfaces Gráficas</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                        <p class="mt-2"><b>RECOMENDADO: </b>Tomar el siguiente tutorial de Interfaces gráficas en JAVA: 
+                            <a href="http://www.jtech.ua.es/historico/plj/restringido/ejercicios/sesion09/sesion09.html" target="_blank">Tema 3: Interfaz Gráfica </a> y 
+                            <a href="https://www.jairogarciarincon.com/clase/interfaces-de-usuario-con-java-swing/ui-ux-y-usabilidad" target="_blank">UI, UX y Usabilidad | Jairo García Rincón </a>.
+                        </p>
+
+                        <p>
+                            Las interfaces gráficas de usuario (GUI) ofrecen al usuario ventanas, cuadros de diálogo, barras de herramientas, botones, listas desplegables y muchos otros elementos con los que ya estamos muy acostumbrados a tratar. Las aplicaciones son conducidas por eventos y se desarrollan haciendo uso de las clases que para ello nos ofrece la API de Java
+                            <br><br>
+                            La interfaz de usuario es la parte del programa que permite al usuario interaccionar con él. La API de Java proporciona una biblioteca de clases para el desarrollo de Interfaces gráficas de usuario (en realidad son dos). La biblioteca proporciona un conjunto de herramientas para la construcción de interfaces gráficas que tienen una apariencia y se comportan de forma semejante en todas las plataformas en las que se ejecuten. La estructura básica de la biblioteca gira en torno a componentes y contenedores. Los contenedores contienen componentes y son componentes a su vez, de forma que los eventos pueden tratarse tanto en contenedores como en componentes. La API está constituida por clases, interfaces y derivaciones. AWT y Swing.
+                        </p>
+
+                        <div class="card-body text-center">
+                            <img src="../../static/img/interfaces.png" class="imgInformacion img-fluid " alt="metodo" />
+                           
+                        </div>
+
+                        <p>En el paquete estándar de Java, contamos con tres opciones para crear interfaces gráficas de usuario:</p>
+
+                        <ul class="mt-2">
+                            <li class="mt-2"><p>AWT -Abstract Window Toolkit.</p></li>
+                            <li class="mt-2"><p>Swing.</p></li>
+                            <li class="mt-2"><p>JavaFX.</p></li>
+                        </ul>
+
+                        <p class="mt-3">AWT es una biblioteca pesada -heavy weight-, mientras que Swing es una biblioteca ligera -light weight- de componentes. JavaFX permite crear intefaces gráficas de usuario tanto para aplicaciones de escritorio como para la web y dispositivos móviles.</p>
+
+                        <h4 class="mt-5"><b>SWING</b></h4>
+
+                        <p class="mt-4">Swing es una biblioteca de clases que permite crear interfaces gráficas de usuario en Java. </p>
+                        <p class="mt-2">Swing forma parte del paquete estándar, no hace falta importar ningún fichero adicional en nuestros proyectos.</p>
+                            
+                            
+                        <div class="card-body text-center">
+                            <img src="../../static/img/swing.png" class="imgInformacion img-fluid " alt="swing" />
+                           
+                        </div> 
+
+
+                        <h4 class="mt-5"><b>AWT</b></h4>
+
+                        <p class="mt-4">(Abstract Windows Toolkit) es la parte de Java que se emplea para construir interfaces gráficas de usuario. Este paquete ha estado presente desde la primera versión (la 1.0), aunque con la 1.1 sufrió un cambio notable. En la versión 1.2 se incorporó también
+                             a Java una librería adicional, Swing, que enriquece a AWT en la construcción de aplicaciones gráficas. </p>
+                     
+                            
+                            
+                        <div class="card-body text-center">
+                            <img src="../../static/img/awt.png" class="imgInformacion img-fluid " alt="awt" />
+                           
+                        </div> 
+
+
+                        <h4 class="mt-5"><b>JAVA FX</b></h4>
+
+                        <p class="mt-4">JavaFX es la apuesta actual de Oracle la comunidad de código abierto en Java para construir interfaces gráficas de usuario multi-dispositivo.
+                        </p>
+                        <p class="mt-2">La tendencia actual en la construcción de interfaces gráficas de usuario es mantener la misma calidad, y riqueza de componentes, tanto si el cliente es de escritorio, como un navegador, un dispositivo móvil, la televisión, etcétera.</p>
+                            
+                            
+                        <div class="card-body text-center">
+                            <img src="../../static/img/javafx.png" class="imgInformacion img-fluid " alt="javafx" />
+                           
+                        </div> 
+   
+
+                           
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
+ <!-- Main content -->
+ <section class="content mt-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>Contenedor: JFrame</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                       <p>Frame es una clase utilizada en Swing (biblioteca gráfica) para generar ventanas sobre las cuales añadir distintos objetos con los que podrá interactuar o no el usuario. A diferencia de JPanel, JFrame posee algunas nociones típicas de una ventana como minimizar, cerrar, maximizar y poder moverla.
+                       <br><br>
+                        JFrame es una subclase que extiende de la clase Frame y que implementa WindowConstants, Accessible y RootPaneContainer.
+                        </p>
+
+                        <h4 class="mt-5"><b>Estructura de un JFrame</b></h4>
+
+                        <div class="card-body text-center">
+                            <img src="../../static/img/jframe.png" class="imgInformacion img-fluid " alt="jframe" /> 
+                        </div> 
+
+                        <div class="card-body text-center">
+                            <img src="../../static/img/jframeJava.png" class="imgInformacion img-fluid " alt="jframeJAVA" />
+                        </div> 
+
+                        <h4 class="mt-4"><b>Constructores</b></h4>
+                        <p>Existen 4 tipos de constructores para inicializar un objeto JFrame:</p>
+                        <ol class="mt-3 mr-5">
+                            <li class="mt-2"><p><b>JFrame():</b> Construye un nuevo marco que inicialmente es invisible.</p></li>
+                            <li class="mt-2"><p><b>JFrame(GraphicsConfiguration):</b> Crea una ventana con la configuración gráfica especificada en el objeto GraphicsConfiguration.</p></li>
+                            <li class="mt-2"><p><b>JFrame(Cadena de texto):</b> Crea una nueva ventana a la que se le pone por título la cadena de texto que se le indique.</p></li>
+                            <li class="mt-2"><p><b>JFrame(Cadena de texto, GraphicsConfiguration):</b> Crea una nueva ventana con el título y la configuración gráfica especificados.</p></li>
+                        </ol>
+
+                        <h4 class="mt-4"><b>Métodos propios de la clase</b></h4>
+                        <p>Además de los métodos heredados, JFrame implementa una serie de métodos propios de esta, que se describen a continuación:</p>
+                        <ul class="mt-3 mr-5">
+                            
+                                <li class="mt-2"><p>addImpl(Component comp, Object constraints, int index): Añade el componente especificado al JFrame. </p></li>
+                                <li class="mt-2"><p>createRootPane(): Crea un Panel por defecto por medio de una llamada al constructor. </p></li>
+                                <li class="mt-2"><p>frameInit(): Llama a los constructores para inicializar el JFrame correctamente. </p></li>
+                                <li class="mt-2"><p>getAccessibleContext(): Obtiene el AccessibleContext asociado a dicho JFrame. </p></li>
+                                <li class="mt-2"><p>getContentPane(): Devuelve el contenido del JFrame. </p></li>
+                                <li class="mt-2"><p>getDefaultCloseOperation(): Devuelve la operación por defecto cuando se cierra el JFrame. </p></li>
+                                <li class="mt-2"><p>getGlassPane(): Devuelve el objeto glassPane que corresponde a este JFrame. </p></li>
+                                <li class="mt-2"><p>getGraphics(): Obtiene las características gráficas del JFrame. </p></li>
+                                <li class="mt-2"><p>getJMenuBar(): Devuelve la barra de menús del JFrame. </p></li>
+                                <li class="mt-2"><p>getLayeredPane(): Obtiene el objeto layeredPane del JFrame. </p></li>
+                                <li class="mt-2"><p>getRootPane(): Obtiene el objeto rootPane del JFrame. </p></li>
+                                <li class="mt-2"><p>getTransferHandler(): Devuelve el objeto transferHandler del JFrame. </p></li>
+                                <li class="mt-2"><p>isDefaultLookAndFeelDecorated(): Comprueba si la apariencia de la ventana JFrame es la apariencia por defecto; en caso afirmativo será cierto. </p></li>
+                                <li class="mt-2"><p>isRootPaneCheckingEnabled(): Devuelve un valor de cierto si las llamadas add y setLayout se remiten a la contentPane. </p></li>
+                                <li class="mt-2"><p>paramString(): Devuelve una representación en cadena de texto del JFrame. </p></li>
+                                <li class="mt-2"><p>processWindowEvent(WindowEvent e): Procesa los eventos que se producen en el JFrame. </p></li>
+                                <li class="mt-2"><p>remove(Component comp): Elimina el componente que se especifica de la ventana JFrame. </p></li>
+                                <li class="mt-2"><p>repaint(long time, int x, int y, int width, int height): Redibuja el rectángulo especificado del JFrame en el tiempo indicado en milisegundos. </p></li>
+                                <li class="mt-2"><p>setContentPane(Container contentPane): Establece el contentPane especificado en JFrame. </p></li>
+                                <li class="mt-2"><p>setDefaultCloseOperation(int operation): Especifica la operación por defecto al cerrar el JFrame.</p></li>
+                                <li class="mt-2"><p>setDefaultLookAndFeelDecorated(boolean defaultLookAndFeelDecorated): Establece la apariencia que debe tener el JFrame, como bordes, botones para distintos usos, título... </p></li>
+                                <li class="mt-2"><p>setGlassPane(Component glassPane): Establece las propiedades del objeto glassPane. </p></li>
+                                <li class="mt-2"><p>setIconImage(Image image): Define el icono que se mostrará en la parte superior izquierda del marco del JFrame. </p></li>
+                                <li class="mt-2"><p>setJMenuBar(JMenuBar menubar): Establece la barra de menús del JFrame. </p></li>
+                                <li class="mt-2"><p>setLayeredPane(JLayeredPane layeredPane): Define el objeto layeredPane del JFrame. </p></li>
+                                <li class="mt-2"><p>setLayout(LayoutManager manager): Establece la forma en que se mostrarán los distintos objetos añadidos al JFrame. </p></li>
+                                <li class="mt-2"><p>setRootPane(JRootPane root): Establece el rootPane de la ventana. </p></li>
+                                <li class="mt-2"><p>setRootPaneCheckingEnabled(boolean enabled): Establece si las llamadas add y setLayout se remiten o no a la contentPane. </p></li>
+                                <li class="mt-2"><p>setTransferHandler(TransferHandler newHandler): Define el transferHandler, que es un mecanismo de soporte de transferencia de datos dentro del JFrame. </p></li>
+                                <li class="mt-2"><p>update(Graphics g): Hace una llamada al método paint(g). </p></li>
+                        </ul>
+
+                        <h4 class="mt-5"><b>Ejercicio Práctico:</b></h4>
+
+                        <div class="text-center  d-flex justify-content-center  mt-4 mb-2">
+                            <div class="card" style="width: 63rem;" id="card">
+                                <div class="card-body">
+                                <div class="embed-responsive embed-responsive-16by9 responsive-iframe" >
+                                    <iframe class="embed-responsive-item "  src="https://www.youtube.com/embed/RF7Ko3AgRf8"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                </div>
+                           
+                        </div> 
+                        <div class="text-center  d-flex justify-content-center  mt-2 mb-2">
+                            <div class="card" style="width: 63rem;" id="card">
+                                <div class="card-body">
+                                <div class="embed-responsive embed-responsive-16by9 responsive-iframe" >
+                                    <iframe class="embed-responsive-item "  src="https://www.youtube.com/embed/XveVkGgv34g"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                </div>
+                           
+                        </div> 
+                        <div class="text-center  d-flex justify-content-center  mt-2 mb-2">
+                            <div class="card" style="width: 63rem;" id="card">
+                                <div class="card-body">
+                                <div class="embed-responsive embed-responsive-16by9 responsive-iframe" >
+                                    <iframe class="embed-responsive-item "  src="https://www.youtube.com/embed/vL3QmyJrgoY"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                </div>
+                           
+                        </div> 
+                               
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
+
+ <!-- Main content -->
+ <section class="content mt-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>Contenedor: JPanel</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                        <p>Se refiere a un contenedor general utilizado para ensamblar un grupo de componentes en sincronización. Es un componente bastante sencillo que generalmente no posee una interfaz gráfica de usuario (GUI). Sin embargo, puede tener una GUI si se presenta sobre un fondo opaco o contiene un borde de visualización.
+                            <br><br>
+                            La clase de contenedor JPanel se encuentra en el paquete javax.swing. El swing es una extensión del Abstract Window Toolkit (AWT), que es la primera generación de la Interfaz de programación de aplicaciones (API) de Java. El primero mejora la capacidad de servicio del segundo.
+                            <br><br>
+                            El JPanel es un contenedor muy simple y ligero que es una subclase de la clase java.swing.JComponent. El JComponent a su vez es una subclase del contenedor. En consecuencia, varios métodos utilizados para JPanel se derivan de sus superclases. Algunos de los ejemplos de tales métodos incluyen observador de imágenes, alineaciones y accesibilidad.
+                            <br><br>
+                            El JPanel permite colocar casillas de verificación, botones, imágenes, campos, etiquetas e incluso textos en él. Se define principalmente como un área donde se pueden colocar controles y elementos visuales.
+                            <br><br>
+                            Para usar un JPanel, primero se necesita crear su objeto, lo cual se hace llamando a un constructor JPanel (). Después de esta invocación, se genera un panel en blanco. Parece sombrío por defecto, pero su color de fondo se puede cambiar invocando los métodos apropiados de la clase JPanel. Los componentes del panel en blanco son personalizables.
+                            <br><br>
+                            Para eso, es necesario utilizar los administradores de diseño. Hay una variedad de administradores de diseño, como Diseño de borde, Diseño de cuadrícula y Diseño de flujo, etc. Estos administradores de diseño permiten ajustar las posiciones, los tamaños y la alineación de los componentes que se han colocado en el JPanel. Los colores de los componentes también se pueden personalizar utilizando constructores como setForeGround (color_obj), setColor (color_obj) y setBackgroundColor (color_obj).
+                            </p>
+
+
+                            <div class="card-body text-center">
+                                <img src="../../static/img/jpanel.png" class="imgInformacion img-fluid " alt="jpanel" /> 
+                            </div> 
+
+                            <h4 class="mt-5"><b>Ejercicio Práctico:</b></h4>
+
+                        <div class="text-center  d-flex justify-content-center  mt-4 mb-2">
+                            <div class="card" style="width: 63rem;" id="card">
+                                <div class="card-body">
+                                <div class="embed-responsive embed-responsive-16by9 responsive-iframe" >
+                                    <iframe class="embed-responsive-item "  src="https://www.youtube.com/embed/_FhKqDj95g0"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                </div>
+                 
+
+
+                       
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
+<div class="container text-center">
+    <h1><b>Actividad</b> </h1>
+
+</div>
+
+
+<div class="container ">
+    <div class="row g-5 d-flex justify-content-center ">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card " style="width: 21rem; height: 350px;" id="card">
+                    <img src="../../static/img/undraw_Programming_re_kg9v.png" class="cd card-img-top" height="200px"
+                        alt="...">
+                    <div class="card-body d-flex justify-content-center text-center">
+                            <h5 class="card-title"  id="card-title"> <a href="../subtema4.1_actv1/" class="vinculoTitulo">Quiz</a></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../subtema4.1_actv1/" class="botonGC btn btn-danger">Realizar</a>
+                    </div>
+                </div>
+            </div>
+
+
+  
+    </div>
+
+
+</div>
+
+
+
+<div class="text-center mt-2 ">
+    <a href="../test3/" class="btn btn-lg btn-warning mr-5" >Regresar</a>
+    <a href="../subtema4.2/" class="btn btn-lg  btn-danger mr-5" >Siguiente</a>
+    <a href="#arriba" class="btn-circle p-3 rounded-circle  btn-info " ><i class='fa fa-arrow-up'></i></a>
+ </div>
+
+
+
+{% endblock %}
+
+
+{% block content3  %}
+<script>hljs.highlightAll();</script>
+{% endblock %}

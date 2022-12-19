@@ -1,0 +1,77 @@
+{%extends "layouts/app.html" %}
+
+{% block title %} Test 4 {% endblock %}
+
+
+{% block content  %}
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h2 class=""><b>Test 4: Diseño de Interfaces Gráficas</b> </h2>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+                        <div class="container contenedorPreguntas">
+
+                                <form action="/test4/" method="POST">
+                                    {% csrf_token %} 
+                                    
+                                    {% for question in questions %}
+                                    <section  class="{{ question.id_q }}">
+                                        <div class="card" id="sectionPregunta">
+
+                                            <div class="card-body">
+
+                                                <h3> <b>{{question.id}}</b> {{ question.descripcion }}</h3>
+                                                {% for opcion in question.opcions %}
+                                                <label id="labelP" >
+                                                   
+                                                    <input type="radio" value="{{ opcion.id }}" name="{{ question.id_q }}" required> {{ opcion.descripcion }}
+                                                </label>
+                                                {% endfor %}
+                                            </div>
+                                        
+                                       
+                                    </section>
+                                    {% endfor %}
+
+                                        <button type="submit"  class="botonTest"><b>Enviar test</b></button>
+
+
+                                </form>
+                            
+                        </div>
+                      
+                    
+
+                </div>
+                <!-- /.card -->
+                <!-- /.card -->
+                    
+                    
+
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+<div class="text-center mt-2 ">
+    <a href="../ejercicioPracticoFinal/" class="btn btn-lg btn-warning mr-5" >Regresar</a>
+    <a href="#arriba" class="btn-circle p-3 rounded-circle  btn-info " ><i class='fa fa-arrow-up'></i></a>
+ </div>
+
+
+{% endblock %}

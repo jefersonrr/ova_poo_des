@@ -1,0 +1,162 @@
+{%extends "layouts/app.html" %}
+
+{% block title %} Subtema 3.2 {% endblock %}
+
+{% block content2  %}
+    <style>
+        .content p{
+            font-size: 20px;
+        }
+        pre{
+            font-size: 20px;
+        }
+        .botonGC {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+         }
+    </style>
+{% endblock %}
+
+{% block content  %}
+
+ <!-- Main content -->
+ <section class="content ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+      
+                        <h2><b>SUBTEMA 3.2 Atributos: Declaración de acuerdo al lenguaje de POO</b> </h2>
+       
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+  <!-- Main content -->
+  <section class="content mt-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>Declaración de acuerdo al lenguaje de POO</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                        <p>La sintaxis general para la declaración de un atributo en el interior de una clase es: </p>
+                        <div class="card-body text-center">
+                            <img src="../../static/img/sintaxis.png" class="imgInformacion img-fluid " alt="modificadores" />
+                           
+                        </div> 
+
+                        <h5 class="mt-2"><b>Por ejemplo:</b></h5>
+                     
+                        <div class="d-flex justify-content-center">
+
+                            <div class="card border-danger border-2"  style="max-width: 40rem;">
+                                <div class="card-body">
+                                    <pre  style="white-space: pre-line;"><code class="language-java">int x; 
+                                        public int elementoX, elementoY;
+                                        private int x, y, z;
+                                        static double descuentoGeneral;
+                                        final bool casado; 
+                                </code></pre> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="mt-2">La declaración de un atributo (o variable miembro o variable de objeto) consiste en la declaración de una variable que únicamente existe en el interior del objeto y por tanto su vida comenzará cuando el objeto comience a existir (el objeto sea creado). Esto significa que cada vez que se cree un objeto se crearán tantas variables como atributos contenga ese objeto en su interior definidas en la clase, que es la plantilla o "molde" del objeto. Todas esas variables estarán encapsuladas dentro del objeto y sólo tendrán sentido dentro de él.
+                            <br><br>
+                            Dentro de la declaración de un atributo podemos encontrar tres partes:
+                            </p>
+
+
+                            <div class="lista mr-5">
+                                <ul class="lista1">
+                                    <li><p><b>Modificadores:</b> Son palabras reservadas que permiten modificar la utilización del atributo: indicar el control de acceso, si el atributo es constante, 
+                                        si se trata de un atributo de clase, etc. Los iremos viendo uno a uno.</p></li>
+                                    <li class="mt-2"><p><b>Tipo:</b> Indica el tipo del atributo. Puede tratarse de un tipo primitivo (int, char, bool, double, etc) 
+                                        o bien de uno referenciado (clase, array, etc.).</p></li>
+                                    <li class="mt-2"><p><b>Diagrama de estado:</b> representa el comportamiento de un sistema a lo largo del tiempo, mostrando 
+                                        los diferentes estados por los que puede pasar un objeto y las transiciones entre ellos.</p> </li>
+                                    <li class="mt-2"><p><b>Diagrama de actividad:</b> muestra el flujo de actividades realizadas por un 
+                                        sistema para llevar a cabo una tarea determinada.</p></li>
+                                    <li class="mt-2"><p><b>Nombre:</b>  Identificador único para el nombre del atributo. Por convenio se suelen utilizar las minúsculas. En caso de que se trate de un identificador que contenga varias palabras, a partir de la segunda palabra se suele poner la letra de cada palabra en mayúsculas. 
+                                        <b>Por ejemplo:</b> primerValor, valor, puertaIzquierda, cuartoTrasero, equipoVecendor, sumaTotal, nombreCandidatoFinal, etc. Cualquier identificador válido de Java será admitido como nombre de atributo válido, pero es importante seguir este convenio para facilitar la legibilidad del código.</p></li>
+                                </ul>
+    
+    
+                            </div>
+
+                            <h5 class="mt-3"><b>Revisar el siguiente contenido de ayuda para mayor aprendizaje: </b></h5>
+
+                            <div class="text-center  d-flex justify-content-center  mt-2 mb-2">
+                                <div class="card" style="width: 63rem;" id="card">
+                                    <div class="card-body">
+                                    <div class="embed-responsive embed-responsive-16by9 responsive-iframe" >
+                                        <iframe class="embed-responsive-item "  src="https://www.youtube.com/embed/h46nlOF1IEk"
+                                            allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    </div>
+                               
+                            </div>      
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+<div class="container text-center">
+    <h1><b>Actividad</b> </h1>
+
+</div>
+
+
+<div class="container ">
+    <div class="row g-5 d-flex justify-content-center ">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card " style="width: 21rem; height: 350px;" id="card">
+                    <img src="../../static/img/undraw_Usability_testing_re_uu1g.png" class="cd card-img-top" height="200px"
+                        alt="...">
+                    <div class="card-body d-flex justify-content-center text-center">
+                            <h5 class="card-title"  id="card-title"> <a href="../subtema3.2_actv1/" class="vinculoTitulo">Completar espacios en blanco</a></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../subtema3.2_actv1/" class="botonGC btn btn-danger">Realizar</a>
+                    </div>
+                </div>
+            </div>
+
+
+  
+    </div>
+
+
+</div>
+
+<div class="text-center mt-2 ">
+    <a href="../subtema3.1/" class="btn btn-lg btn-warning mr-5" >Regresar</a>
+    <a href="../subtema3.3/" class="btn btn-lg  btn-danger mr-5" >Siguiente</a>
+    <a href="#arriba" class="btn-circle p-3 rounded-circle  btn-info " ><i class='fa fa-arrow-up'></i></a>
+ </div>
+
+{% endblock %}
+
+
+{% block content3  %}
+<script>hljs.highlightAll();</script>
+{% endblock %}

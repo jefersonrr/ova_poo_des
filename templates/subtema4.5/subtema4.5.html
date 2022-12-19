@@ -1,0 +1,195 @@
+{%extends "layouts/app.html" %}
+
+{% block title %} Subtema 4.5 {% endblock %}
+
+{% block content2  %}
+    <style>
+        .content p{
+            font-size: 20px;
+        }
+        pre{
+            font-size: 20px;
+        }
+        .botonGC {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+         }
+    </style>
+{% endblock %}
+
+{% block content  %}
+
+
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>SUBTEMA 4.5 Para Acción de Comando: JButton</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                       <p>
+                        Un objeto de control JButton permite dibujar en el formulario un objeto que contiene un proceso a ejecutar. Se utiliza comúnmente para llevar a cabo procesos específicos según la naturaleza de la aplicación. 
+                       </p>
+
+                       <h4 class="mt-5"><b>Propiedades más usadas:</b></h4>
+
+                            <ul class="mt-4">
+                                <li class="mt-2"><p><b>Text: </b>Contiene el valor o dato introducido en el cuadro de texto. </p></li>
+                                <li class="mt-2"><p><b>Font: </b>Permite establecer el tipo de letra del texto en la caja.</p></li>
+                                <li class="mt-2"><p><b>Enabled: </b>Para habilitar o inhabilitar el uso del objeto de control.</p></li>
+                            </ul>
+
+                        <div class="card-body text-center">
+                            <img src="https://formacion.jugarenequipo.es/index.php/galeria-de-imagenes/image?view=image&format=raw&type=img&id=402" class="imgInformacion img-fluid " alt="JButton" />
+                        </div>
+               
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
+ <!-- Main content -->
+ <section class="content mt-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>El modelo de eventos en JAVA</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                       <p>En Java, cada evento está representado por un objeto que es una subclase de la clase EventObject en el paquete java.util. 
+                        Cada subclase de EventObject representa un tipo de evento particular. Por ejemplo:
+                    </p>
+
+                    <ul class="mt-4">
+                        <li class="mt-2"><p><b>MouseEvent, </b>para representar acciones del ratón: mover, arrastrar, hacer clic en un botón del ratón, etc.</p></li>
+                        <li class="mt-2"><p><b>KeyEvent, </b>para representar acciones del teclado, esto es, pulsar teclas.</p></li>
+                        <li class="mt-2"><p><b>ActionEvent, </b>para representar un acción del usuario en la interfaz, por ejemplo, pulsar un botón en la panta</p></li>
+                    </ul>
+
+                    <p class="mt-3">
+                        No obstante, en el modelo de eventos de Java, los EventObject no realizan acciones por si mismos, sino que esos eventos son enviados a otro objeto encargado de responder a un tipo de evento en particular. Estos objetos son los que conocemos como listeners o "escuchadores", y existen diferentes listeners que "escuchan" a los diferentes eventos, tales como los mouse listeners, key listeners o action listeners.
+                        <br><br>
+                        Los listener no se implementan como clases en java, sino como interfaces. Un interface sería entonces una colección de métodos que definen un comportamiento en particular. De este modo, cualquier clase que suministre información para dichos métodos puede declarar que implementa a dicho interface.
+                        <br><br>
+                        La gran ventaja de implementar interfaces frente a heredar de otras clases es que una misma clase puede implementar varios interfaces simultáneamente pero solo puede heredar de una.
+                        <br><br>
+                        Los listeners que usaremos estarán en el paquete java.awt.event (que debemos importar antes de implementarlos) y nos podemos encontrar los siguientes:
+                    </p>
+
+                    <div class="card-body text-center">
+                        <img src="../../static/img/actionListener.png" class="imgInformacion img-fluid " alt="actionListener" />
+                    </div>
+
+                    <div class="card-body text-center">
+                        <img src="../../static/img/keyListener.png" class="imgInformacion img-fluid " alt="keyListener" />
+                    </div>
+
+                    <div class="card-body text-center">
+                        <img src="../../static/img/focusListener.png" class="imgInformacion img-fluid " alt="focusListener" />
+                    </div>
+
+
+                    <div class="card-body text-center">
+                        <img src="../../static/img/mouseListener.png" class="imgInformacion img-fluid " alt="mouseListener" />
+                    </div>
+
+                    <div class="card-body text-center">
+                        <img src="../../static/img/mouseMotionListener.png" class="imgInformacion img-fluid " alt="mouseMotionListener" />
+                    </div>
+                    
+                    <p class="mt-4">El control JButton tiene como objetivo que el usuario pueda interactuar con él. La mecánica para atrapar el clic del objeto de la clase JButton se hace mediante la implementación de un ActionListener como acabamos de ver, más la declaración del método asociado a ese evento, en este caso actionPerformed.</p>
+
+
+                    <h4 class="mt-5"><b>Ejemplos aplicados a tipos de eventos</b></h4>
+
+                    <p><a href="https://www.jairogarciarincon.com/clase/interfaces-de-usuario-con-java-swing/eventos-y-componente-jbutton" target="_blank">Eventos y componente JButton | Jairo García Rincón</a></p>
+
+                        <h4 class="mt-5"><b>Ejercicio Práctico:</b></h4>
+
+                        <div class="text-center  d-flex justify-content-center  mt-4 mb-2">
+                            <div class="card" style="width: 63rem;" id="card">
+                                <div class="card-body">
+                                <div class="embed-responsive embed-responsive-16by9 responsive-iframe" >
+                                    <iframe class="embed-responsive-item "  src="https://www.youtube.com/embed/MY6e8CNd8gA"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                </div>
+                           
+                        </div> 
+            
+                               
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+<div class="container text-center">
+    <h1><b>Actividad</b> </h1>
+
+</div>
+
+
+<div class="container ">
+    <div class="row g-5 d-flex justify-content-center ">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card " style="width: 21rem; height: 350px;" id="card">
+                    <img src="../../static/img/undraw_Programming_re_kg9v.png" class="cd card-img-top" height="200px"
+                        alt="...">
+                    <div class="card-body d-flex justify-content-center text-center">
+                            <h5 class="card-title"  id="card-title"> <a href="../subtema4.5_actv1/" class="vinculoTitulo">Quiz</a></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../subtema4.5_actv1/" class="botonGC btn btn-danger">Realizar</a>
+                    </div>
+                </div>
+            </div>
+
+
+  
+    </div>
+
+
+</div>
+
+<div class="text-center mt-2 ">
+    <a href="../subtema4.4/" class="btn btn-lg btn-warning mr-5" >Regresar</a>
+    <a href="../subtema4.6/" class="btn btn-lg  btn-danger mr-5" >Siguiente</a>
+    <a href="#arriba" class="btn-circle p-3 rounded-circle  btn-info " ><i class='fa fa-arrow-up'></i></a>
+ </div>
+
+{% endblock %}
+
+
+{% block content3  %}
+<script>hljs.highlightAll();</script>
+{% endblock %}

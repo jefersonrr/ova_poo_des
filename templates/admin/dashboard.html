@@ -1,0 +1,198 @@
+
+{%extends "layouts/appAdmin.html" %}
+{% load staticfiles %}
+{% block title %} Estudiantes {% endblock %}
+
+{% block content2  %}
+<!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css'%}">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Tempusdominus Bootstrap 4 -->
+<link rel="stylesheet" href="{% static 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css'%}">
+<!-- iCheck -->
+<link rel="stylesheet" href="{% static 'plugins/icheck-bootstrap/icheck-bootstrap.min.css'%}">
+<!-- JQVMap -->
+<link rel="stylesheet" href="{% static 'plugins/jqvmap/jqvmap.min.css'%}">
+<!-- Theme style -->
+<link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css'%}">
+<!-- overlayScrollbars -->
+<link rel="stylesheet" href="{% static 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css'%}">
+<!-- Daterange picker -->
+<link rel="stylesheet" href="{% static 'plugins/daterangepicker/daterangepicker.css'%}">
+<!-- summernote -->
+<link rel="stylesheet" href="{% static 'plugins/summernote/summernote-bs4.min.css'%}">
+
+{% endblock  %}
+
+{% block content  %}
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+      
+
+        <div class="row">
+            <div class="col-12">
+
+
+
+                <div class="card">
+                    <div class="card-header  border-info">
+                        <h3 class="card-title"><strong>Estadisticas Generales</strong> </h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+
+                        <!-- Small Box (Stat card) -->
+
+                        <div class="row">
+                            <div class="col-lg-4 col-6">
+                                <!-- small card -->
+                                <div class="small-box bg-success">
+                                    <div class="inner">
+                                        <h3>5</h3>
+
+                                        <p>Estudiantes abrobados</p>
+                                    </div>
+                                    <div class="icon">
+                                        <em class='fa fa-check-circle'></em>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- ./col -->
+                            <div class="col-lg-4 col-6">
+                                <!-- small card -->
+                                <div class="small-box bg-danger">
+                                    <div class="inner">
+                                        <h3>7</h3>
+
+                                        <p>Estudiantes desabrobados</p>
+                                    </div>
+                                    <div class="icon">
+                                        <em class='fas fa-sad-cry'></em>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- ./col -->
+                            <div class="col-lg-4 col-6">
+                                <!-- small card -->
+                                <div class="small-box bg-primary">
+                                    <div class="inner">
+                                        <h3>20</h3>
+
+                                        <p>Estudiantes registrados</p>
+                                    </div>
+                                    <div class="icon">
+                                        <em class="fas fa-user-plus"></em>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- ./col -->
+                        
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+
+        <div class="card">
+            <div class="card-header  border-info">
+                <h3 class="card-title"><strong> <em class="far fa-calendar-alt"></em>
+                        Calendario</strong> </h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+
+                <!-- Calendar -->
+                <div class="card bg-gradient-info">
+                    <div class="card-header border-0">
+
+                        <h3 class="card-title">
+                        </h3>
+
+                        <!-- /. tools -->
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body pt-0">
+                        <!--The calendar -->
+                        <div id="calendar" style="width: 100%"></div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+            </div>
+            <!-- /.card-body -->
+        </div>
+    </div>
+
+    <!-- /.container-fluid -->
+</section>
+
+
+{% endblock  %}
+
+
+
+{% block content3  %}
+
+<!-- daterangepicker -->
+<script src="{% static 'plugins/moment/moment.min.js'%}"></script>
+<script src="{% static 'plugins/daterangepicker/daterangepicker.js'%}"></script>
+
+
+<script src="{% static 'plugins/jquery/jquery.min.js'%}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'plugins/jquery-ui/jquery-ui.min.js'%}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+<!-- ChartJS -->
+<script src="{% static 'plugins/chart.js/Chart.min.js'%}"></script>
+<!-- Sparkline -->
+<script src="{% static 'plugins/sparklines/sparkline.js'%}"></script>
+<!-- JQVMap -->
+<script src="{% static 'plugins/jqvmap/jquery.vmap.min.js'%}"></script>
+<script src="{% static 'plugins/jqvmap/maps/jquery.vmap.usa.js'%}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{% static 'plugins/jquery-knob/jquery.knob.min.js'%}"></script>
+<!-- daterangepicker -->
+<script src="{% static 'plugins/moment/moment.min.js'%}"></script>
+<script src="{% static 'plugins/daterangepicker/daterangepicker.js'%}"></script>
+
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{% static 'plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js'%}"></script>
+
+<script>
+    // The Calender
+  $('#calendar').datetimepicker({
+    format: 'L',
+    inline: true
+  })
+</script>
+
+
+
+
+{% endblock  %}

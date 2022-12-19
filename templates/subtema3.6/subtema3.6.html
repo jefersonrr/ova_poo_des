@@ -1,0 +1,264 @@
+{%extends "layouts/app.html" %}
+
+{% block title %} Subtema 3.6 {% endblock %}
+
+{% block content2  %}
+    <style>
+        .content p{
+            font-size: 20px;
+        }
+        pre{
+            font-size: 20px;
+        }
+        .botonGC {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+         }
+    </style>
+{% endblock %}
+
+{% block content  %}
+
+
+ <!-- Main content -->
+ <section class="content mb-2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+      
+                        <h3><b>SUBTEMA 3.6 Métodos con/sin parámetros: Constructores, get, set, mutadores</b> </h3>
+       
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+  <!-- Main content -->
+  <section class="content ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>Parámetros</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                        <p>Para mayor información se recomienda consultar la documentación de Java para los métodos y sus parámetros: 
+                            <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html" target="_blank">Passing Information to a Method or a Constructor</a>.</p>
+
+
+                        <p>Los parámetros de una función son variables locales que se inicializan en el momento de la llamada al método. Fuera de la función no se conocen y no pueden ser accedidas. Se crean al entrar en la función y se destruyen al salir de ella.
+                            <br><br>
+                            El paso de parámetros o argumentos a las funciones se puede hacer de dos formas:
+                            </p>
+
+                            <ul>
+                                <li class="mt-2"><p>Paso por valor</p></li>
+                                <li class="mt-2"><p>Paso por  referencia </p></li>
+                                
+                            </ul>
+
+                            <h4 class="mt-5"><b>Paso por valor</b></h4>
+
+                            <p>Los parámetros de la función reciben una copia del valor de los argumentos de la llamada.
+                                <br><br>
+                                Las modificaciones que se hagan sobre los parámetros formales no afectan al valor de los parámetros actuales.
+                                <br><br>
+                                Es el único modo de pasar las variables de los tipos básicos o primitivos.
+                                </p>
+
+
+                                <h4 class="mt-5"><b>Paso por dirección o referencia</b></h4>
+
+                            <p>Los parámetros formales reciben una copia de la referencia a un objeto. Los parámetros formales serán por tanto de  tipo referenciado.
+                                <br><br>
+                                Es la forma de pasar los objetos a las funciones y la única forma de poder modificar dentro de un método una variable de tipo primitivo es incluyéndola como variable miembro de una clase y pasar como argumento una referencia a un objeto de dicha clase.
+                                <br><br>
+                                Los Parámetros en Java son los valores que recibe una función o un método, estos parámetros están definidos dentro de los paréntesis de la función o método.
+                                <br><br>
+                                Los parámetros definen el tipo de dato que van a recibir, si es un número, cadena u otros. Cada parámetro se separa con comas.      
+                                </p>
+
+
+
+                        <div class="d-flex justify-content-center">
+
+                            <div class="card border-danger border-2"  style="max-width: 40rem;">
+                                <div class="card-body">
+                                    <pre  style="white-space: pre-line;"><code class="language-java">int x; 
+                                        //Definición de una función
+                                        static void sumar(int a, int b){
+                                            //Contenido de la Función
+                                        }                                     
+                                </code></pre> 
+                                </div>
+                            </div>
+                        </div>
+           
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
+ <!-- Main content -->
+ <section class="content ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>Argumentos </b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                        <p>Los argumentos son los valores que se envían a una función o 
+                            método al momento de llamar dicha función o método, estos valores son recibidos mediante parámetros de una función o método.  
+                            </p>
+
+                            <div class="d-flex justify-content-center">
+
+                                <div class="card border-danger border-2"  style="max-width: 40rem;">
+                                    <div class="card-body">
+                                        <pre  style="white-space: pre-line;"><code class="language-java">int x; 
+                                            public class Main {
+                                                public static void main(String[] args) {
+                                                    //Llamar a una función
+                                                    sumar(4, 5);
+                                                }
+                                                //Definición de una función
+                                                static void sumar(int a, int b){
+                                                    int r = a + b;
+                                                    System.out.println("La Suma: "+ r);
+                                                }
+                                             }                                                                                  
+                                    </code></pre> 
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+
+ <!-- Main content -->
+ <section class="content ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-header  border-info">
+                        <h3><b>Constructores</b> </h3>
+       
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body text-justify ">
+
+                        <p>Puede ser tedioso inicializar cada vez que se crea una instancia de todas las variables en una clase. Incluso al agregar funciones de conveniencia como setDim (), es más simple y más conciso tener toda la configuración en el momento en que el objeto se crea por primera vez. Debido a que la exigencia de inicialización es tan común, Java permite inicializar ellos mismos cuando se crean los objetos. Esta inicialización automática se realiza mediante el uso de un constructor.
+                            <br><br>
+                            Un constructor inicializa un objeto inmediatamente tras su creación. Tiene el mismo nombre que la clase en la que reside y es sintácticamente similar a un método. Una vez definido, automáticamente se llama al constructor, inmediatamente después de crear el objeto, antes de que finalice el operador new. Constructores de mirar un poco extraños porque no tienen ningún tipo de valor devuelto, ni incluso nula. Esto es porque la implícita volver tipo de constructor de una clase es el propio tipo de clase. Es trabajo del constructor para inicializar el estado interno de un objeto, por lo que el código de creación de una instancia tendrá un objeto totalmente inicializado, utilizable inmediatamente. Usted puede repasar el ejemplo de cuadro para que las dimensiones de un cuadro se inicializan automáticamente cuando se construye un objeto. Para ello, reemplazar (de setDim) con un constructor.  
+                            </p>
+
+                            <h4 class="mt-5"><b>Videos:</b></h4>
+
+                            <div class="text-center  d-flex justify-content-center  mt-2 mb-2">
+                                <div class="card" style="width: 63rem;" id="card">
+                                    <div class="card-body">
+                                    <div class="embed-responsive embed-responsive-16by9 responsive-iframe" >
+                                        <iframe class="embed-responsive-item "  src="https://www.youtube.com/embed/97d2wo8-LvM"
+                                            allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    </div>
+                               
+                            </div> 
+
+                            <div class="text-center  d-flex justify-content-center  mt-2 mb-2">
+                                <div class="card" style="width: 63rem;" id="card">
+                                    <div class="card-body">
+                                    <div class="embed-responsive embed-responsive-16by9 responsive-iframe" >
+                                        <iframe class="embed-responsive-item "  src="https://www.youtube.com/embed/Kfhs2a03Duo"
+                                            allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    </div>
+                               
+                            </div> 
+                            
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+<div class="container text-center">
+    <h1><b>Actividad</b> </h1>
+
+</div>
+
+
+<div class="container ">
+    <div class="row g-5 d-flex justify-content-center ">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card " style="width: 21rem; height: 350px;" id="card">
+                    <img src="../../static/img/undraw_Online_test_re_kyfx.png" class="cd card-img-top" height="200px"
+                        alt="...">
+                    <div class="card-body d-flex justify-content-center text-center">
+                            <h5 class="card-title"  id="card-title"> <a href="../subtema3.6_actv1/" class="vinculoTitulo">Verdadero o falso</a></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../subtema3.6_actv1/" class="botonGC btn btn-danger">Realizar</a>
+                    </div>
+                </div>
+            </div>
+
+
+  
+    </div>
+
+
+</div>
+
+<div class="text-center mt-2 ">
+    <a href="../subtema3.5/" class="btn btn-lg btn-warning mr-5" >Regresar</a>
+    <a href="../subtema3.7/" class="btn btn-lg  btn-danger mr-5" >Siguiente</a>
+    <a href="#arriba" class="btn-circle p-3 rounded-circle  btn-info " ><i class='fa fa-arrow-up'></i></a>
+ </div>
+
+{% endblock %}
+
+
+{% block content3  %}
+<script>hljs.highlightAll();</script>
+{% endblock %}
