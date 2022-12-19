@@ -495,8 +495,10 @@ def test_2(request):
             return render(request,'login/login.html')
     user= request.session.get('user','DE')
     nit= request.session.get('nit','DE')
+    print("***************",nit)
     ser_id = User.objects.filter(id=int(nit))
     inten = IntentoTest.objects.filter(user=ser_id[0] ,test=2)
+    print(inten)
     
     if(len(inten)>0):
 
@@ -507,6 +509,7 @@ def test_2(request):
         'test3': validar_test(request,3),
         'test4': validar_test(request,4)
         }
+        print(context)
         
         return render(request,'test2/resultadotest2.html',context=context)
     questions = Questions.objects.filter(test=2)
@@ -561,7 +564,7 @@ def resultado_test_2(request):
         intento.test=te[0]
         intento.score_total = promedio
         intento.save()
-    request.session['test3'] = ""
+        request.session['test3'] = ""
     context = {
         'user':user,
         'promedio':promedio,
@@ -569,7 +572,7 @@ def resultado_test_2(request):
         'test3': validar_test(request,3),
         'test4': validar_test(request,4)
     }
-    return render(request,'test3/resultadotest2.html',context=context)
+    return render(request,'test2/resultadotest2.html',context=context)
 
 def test_3(request):
     
@@ -643,7 +646,7 @@ def resultado_test_3(request):
         intento.test=te[0]
         intento.score_total = promedio
         intento.save()
-    request.session['test4'] = ""
+        request.session['test4'] = ""
     context = {
         'user':user,
         'promedio':promedio,

@@ -25,12 +25,12 @@
                             <div class="mt-4 ">
                                 <div class="row">
                                     <div class="col-md-3"></div>
-                                    {% if nota >= 3 %}
+                                    {% if promedio >= 3 %}
                                          <div class="col-md-6 border border-2 border-success bg-success">
                                     {% else %}
                                          <div class="col-md-6 border border-2 border-danger bg-danger">
                                     {% endif %}
-                                        <h1 class="">Obtuviste una nota de: <b>2.9</b></h1>
+                                        <h1 class="">Obtuviste una nota de: <b>{{ promedio}}</b></h1>
                                     </div>
                                     <div class="col-md-3"></div>
                                 </div>
@@ -39,7 +39,7 @@
                             
 
                             
-                            {% if nota >= 3 %}
+                            {% if promedio >= 3 %}
                                 <h1 class="mt-4"><b>APROBASTE EL TEST</b></h1>
                                 <img src="../../static/img/aprobado.png"class="mt-4" alt="" width="120rem">
                             {% else %}
