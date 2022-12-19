@@ -1,1 +1,1 @@
-web:  gunicorn ova_poo.wsgi
+web: gunicorn ova_poo.wsgi --log-file -
