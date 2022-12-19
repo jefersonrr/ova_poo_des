@@ -65,8 +65,10 @@ def Home(request):
         return render(request,'home/index.html',context=context)
     else :
         from apps.tests.views import consultar_estudiantes
+        usuarios = User.objects.filter(rol=1)
         context = {
         'user':user_sesion,
+        'totales':len(usuarios),
         'estudiantes':consultar_estudiantes(),
         }
         return render(request,'admin/index.html',context=context)

@@ -16,8 +16,39 @@ def admin_dashboard(request):
     if request.session.get('user','DE') == 'DE':
             return render(request,'login/login.html')
     user= request.session.get('user','DE')
+    usuarios = User.objects.filter(rol=1)
+    aprobados=0
+    reprobados=0
+    for us in usuarios:
+        intentos = IntentoTest.objects.filter(user=us)
+        nota =0
+        test1 = "-"
+        test2 = "-"
+        test3 = "-"
+        test4 = "-"
+        for inte in intentos:
+            nota += inte.score_total
+        if len(intentos)>0:
+            nota= round(nota /4,1)
+        for  i in intentos:
+            if i.test.id == 1:
+                test1 = round(i.score_total,1)
+            if i.test.id == 2:
+                test2 = round(i.score_total,1)
+            if i.test.id == 3:
+                test3 = round(i.score_total,1)
+            if i.test.id == 4:
+                test4 = round(i.score_total,1)
+        if nota>=3:
+            aprobados+=1
+        else :
+            reprobados+=1
+        
     context = {
         'user':user,
+        'totales':len(usuarios),
+        'aprobados':aprobados,
+        'reprobados':reprobados,
         
     }
     return render(request,'admin/dashboard.html',context=context)
@@ -26,9 +57,10 @@ def admin_estudiantes(request):
     if request.session.get('user','DE') == 'DE':
             return render(request,'login/login.html')
     user= request.session.get('user','DE')
-    
+    usuarios = User.objects.filter(rol=1)
     context = {
     'user':user,
+    'totales':len(usuarios),
     'estudiantes':consultar_estudiantes(),
     }
     return render(request,'admin/index.html',context=context)
@@ -64,6 +96,8 @@ def consultar_estudiantes():
         estudiantes.append(data)
         
     return estudiantes
+
+
 
 def admin_show_estudiantes(request):
     if request.session.get('user','DE') == 'DE':
