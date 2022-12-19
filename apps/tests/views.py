@@ -4,7 +4,7 @@ import json
 from json import loads,dumps 
 from apps.tests.models import Tests, Answers,AnswersValidate, Questions, IntentoTest
 from apps.users.models import *
-from apps.users.views import *
+from apps.users.views import validar_test
 
 # Create your views here.
 

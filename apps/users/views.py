@@ -5,7 +5,7 @@ from json import loads,dumps
 from django.views.decorators.csrf import csrf_exempt
 from apps.users.models import User,Person, Rol
 from apps.tests.models import *
-from apps.tests.views import consultar_estudiantes
+
 
 # Create your views here.
 @csrf_exempt
@@ -64,6 +64,7 @@ def Home(request):
         
         return render(request,'home/index.html',context=context)
     else :
+        from apps.tests.views import consultar_estudiantes
         context = {
         'user':user_sesion,
         'estudiantes':consultar_estudiantes(),
