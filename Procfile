@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn ova_poo.wsgi
+web:  gunicorn ova_poo.wsgi
