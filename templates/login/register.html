@@ -84,7 +84,7 @@
                                 <!-- Document -->
                                 <div class="form-group">
                                     <label class="form-label">Documento:</label>
-                                    <input type="number" class="form-control " name="document" required>
+                                    <input type="text" class="form-control " name="document" required maxlength="11" pattern="^[0-9]+">
                                 </div>
                                 <!-- ./Document -->
 
@@ -117,8 +117,8 @@
 
                                 <!-- Telephone -->
                                 <div class="form-group">
-                                    <label class="form-label">Teléfono:</label>
-                                    <input type="text" class="form-control " name="telephone" required>
+                                    <label class="form-label">Celular:</label>
+                                    <input type="text" class="form-control " name="telephone" required maxlength="14"  pattern="^[0-9]+">
                                 </div>
 
                                 <!-- ./Telephone -->
@@ -126,7 +126,7 @@
                                 <!-- Code -->
                                 <div class="form-group">
                                     <label class="form-label">Código Institucional:</label>
-                                    <input type="text" class="form-control " name="code" required>
+                                    <input type="text" class="form-control " name="code" required maxlength="8" required  pattern="^[0-9]+">
                                 </div>
 
                                 <!-- ./Code -->
